@@ -14,14 +14,12 @@ func main() {
 }
 
 // type sleeper struct{}
-type Sleeper interface {
-	Sleep()
-}
-
 // func (s sleeper) Sleep() {
 // 	time.Sleep(1 * time.Second)
 // }
-
+type Sleeper interface {
+	Sleep()
+}
 type ConfigurableSleeper struct {
 	duration time.Duration
 	sleep    func(time.Duration)
